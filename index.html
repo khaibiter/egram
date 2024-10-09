@@ -3,20 +3,22 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="./style.css" rel="stylesheet" />
+    <link href="./src/style.css" rel="stylesheet" />
     <title>web</title>
   </head>
   <body>
     <main class="overflow-hidden">
-      <header class="bg-transparent relative z-10">
+      <header class="w-full bg-transparent relative z-10">
         <div
-          class="flex items-center justify-between content-center w-[1200px] h-24 m-auto border-b border-gray-200"
+          class="w-10/12 h-24 flex items-center justify-between content-center m-auto border-b border-gray-200"
         >
           <a href="#" class="flex">
-            <img src="img/logo.svg" alt="logo" />
-            <img src="img/egram.svg" alt="logo" />
+            <img src="./src/img/logo.svg" alt="logo" />
+            <img src="./src/img/egram.svg" alt="logo" class="hidden sm:flex" />
           </a>
-          <nav class="flex gap-10 text-lg text-slate-500 font-medium">
+          <nav
+            class="gap-10 text-lg text-slate-500 font-medium whitespace-nowrap hidden lg:flex"
+          >
             <a class="text-blue-600 font-bold" href="#">Home</a>
             <a href="#">About Us</a>
             <a href="#">Our Team</a>
@@ -27,20 +29,18 @@
           <button
             class="w-12 h-12 bg-blue-900 bg-opacity-10 rounded-full flex justify-center items-center"
           >
-            <img src="img/menu-burger.svg" alt="menu-burger" />
+            <img src="./src/img/menu-burger.svg" alt="menu-burger" />
           </button>
         </div>
       </header>
-      <section class="flex h-[983px] w-full">
-        <!-- <div class="w-[594.02px] h-[484px] gap-4 ml-[120px] mt-20"> -->
-        <div class="w-1/2 gap-4 ml-[120px] mt-20">
-          <p
-            class="w-[594px] h-[148px] font-inter text-[62px] font-bold leading-[74.4px] tracking-[-2px] text-left mb-4"
-          >
+      <section class="w-full h-auto mb-10 md:h-[900px] lg:flex">
+        <!-- bên div1 -->
+        <section class="w-1/2 gap-4 mt-20 mx-auto md:w-1/2 sm:ml-28">
+          <p class="w-full font-inter text-4xl font-bold mb-8 sm:text-6xl">
             Chào mừng đến với Egram Potal
           </p>
           <p
-            class="w-[430px] h-[210px] font-inter text-[20px] font-normal leading-[30px] text-left mb-[56px] text-slate-500"
+            class="w-full font-inter text-sm font-normal leading-normal text-left mb-8 text-slate-500 md:text-xl sm:w-96"
           >
             Egram là ứng dụng được thiết kế để giúp người dùng có thể quản lí và
             thanh toán các loại hoá đơn một cách thuận tiện. Người dùng có thể
@@ -50,85 +50,108 @@
           </p>
           <div class="flex gap-6">
             <button
-              class="rounded-2xl w-[194px] h-[54px] bg-blue-700 text-white text-base"
+              class="rounded-2xl w-48 h-14 bg-blue-700 text-white text-base"
             >
               Bắt đầu
             </button>
             <button
-              class="flex items-center border-2 border-blue-700 w-[194px] h-[54px] rounded-2xl pt-[14px] pr-[20px] pb-[14px] pl-[20px] gap-[10px]"
+              class="flex items-center rounded-2xl w-48 h-14 border border-blue-700"
             >
-              <div class="w-5 h-5">
+              <div class="w-8 h-5 sm:ml-4">
                 <a href="#">
-                  <img src="img/ icon-play.svg" alt="icon" />
+                  <img src="./src/img/ icon-play.svg" alt="icon" />
                 </a>
               </div>
               <b
-                class="justify-center mx-8 inter text-base font-bold leading-[26px] text-center text-blue-600"
+                class="justify-center text-base font-bold text-center text-blue-600 sm:mx-8"
                 >Liên hệ</b
               >
             </button>
           </div>
-        </div>
-        <div class="w-1/2 relative">
-          <div class="absolute left-[-77px]">
-            <div
-              class="absolute w-[593px] h-[631px] left-[160px] top-[-110px] z-20"
-            >
-              <img src="img/star.svg" alt="star" />
-            </div>
-            <div
-              class="absolute inset-0 w-[400px] h-[252px] left-[290px] top-[42px] z-30"
-            >
-              <img src="img/balance.svg" alt="balance" />
-            </div>
-            <div
-              class="absolute inset-0 w-[867px] h-[539,7px] left-[-60px] top-[172px] z-10"
-            >
-              <img src="img/login.svg" alt="login" />
-            </div>
-            <div
-              class="absolute inset-0 w-[264px] h-[300px] left-[-15px] top-[460px] z-40"
-            >
-              <img src="img/email.svg" alt="email" />
-            </div>
-            <div
-              class="absolute inset-0 w-[212px] h-[250px] left-[-27px] top-[476px] z-50"
-            >
-              <img src="img/transfer.svg" alt="transfer" />
+        </section>
+        <!--  bên div 2-->
+        <section class="w-full h-auto mb-10 lg:w-1/2 md:mt-2">
+          <div class="relative">
+            <div class="absolute md:left-[-74px]">
+              <div
+                class="absolute z-20 md:w-[593px] md:h-[631px] md:left-40 md:top-[-110px]"
+              >
+                <img
+                  src="./src/img/star.svg"
+                  alt="star"
+                  class="max-w-full h-auto object-cover"
+                />
+              </div>
+              <div
+                class="absolute inset-0 z-30 md:w-96 md:h-60 md:left-72 md:top-11"
+              >
+                <img
+                  src="./src/img/balance.svg"
+                  alt="balance"
+                  class="max-w-full h-auto object-cover"
+                />
+              </div>
+              <div
+                class="absolute inset-0 z-10 md:w-[867px] md:h-[540px] md:left-[-60px] md:top-44"
+              >
+                <img
+                  src="./src/img/login.svg"
+                  alt="login"
+                  class="max-w-full h-auto object-cover"
+                />
+              </div>
+              <div
+                class="absolute inset-0 z-40 md:w-80 md:h-96 md:left-[-15px] md:top-[460px]"
+              >
+                <img
+                  src="./src/img/email.svg"
+                  alt="email"
+                  class="max-w-full h-auto object-cover"
+                />
+              </div>
+              <div
+                class="absolute inset-0 z-50 md:w-64 md:h-80 md:left-[-30px] md:top-[480px]"
+              >
+                <img
+                  src="./src/img/transfer.svg"
+                  alt="transfer"
+                  class="max-w-full h-auto object-cover"
+                />
+              </div>
             </div>
           </div>
-        </div>
+        </section>
       </section>
     </main>
     <section
-      class="flex mx-auto w-[1360px] h-[547px] border-2 rounded-[2rem] bg-[#1644EB] relative"
+      class="flex border-2 rounded-[2rem] bg-[#1644EB] relative mx-auto mt-10 md:w-[1360px] md:pb-20"
     >
-      <div class="flex relative">
+      <div class="relative hidden sm:flex">
         <img
-          src="img/single-electric.svg"
+          src="./src/img/single-electric.svg"
           alt="single"
           class="w-[380px] h-[398px] mt-[74px] ml-[77.5px] z-20"
         />
         <img
-          src="img/ballfall.svg"
+          src="./src/img/ballfall.svg"
           alt="ballfall"
           class="absolute left-24 top-24 w-[380px] h-[398px] z-10"
         />
       </div>
-      <div class="w-[580px] h-[230px] mt-[139px] ml-[160px] z-30">
+      <div class="md:ml-40 md:mt-36">
         <p
-          class="w-[580px] h-[62px] text-[56px] leading-[61.6px] text-white mb-[10px]"
+          class="text-xl leading-[61.6px] text-white text-center mb-[10px] md:text-5xl md:text-start md:mb-4"
         >
           Đặt đơn điện
         </p>
-        <div class="w-[580px] h-[144px] text-white">
-          <p class="text-base font-normal mb-[10px]">
+        <div class="text-white text-center md:w-[580px] md:text-start">
+          <p class="text-sm font-normal mb-[10px] md:text-base">
             We understand the feeling of unease that comes when you're eager to
             share something you've written. It can be incredibly frustrating
             when your writing falls short of conveying the ideas you wish to
             express.
           </p>
-          <p class="text-base font-normal">
+          <p class="text-sm font-normal md:text-base">
             That's why we developed the Masco AI writing tool. It empowers you
             to write with greater speed and confidence while also saving you
             valuable time.
@@ -137,15 +160,40 @@
       </div>
       <div class="absolute top-0 right-0">
         <img
-          src="img/rotating-circle.svg"
+          src="./src/img/rotating-circle.svg"
           alt="rotating"
           class="w-[673px] h-[673px]"
         />
         <img
-          src="img/rotating2.svg"
+          src="./src/img/rotating2.svg"
           alt="rotating2"
           class="min-w-[358px] min-h-[358px] absolute top-[13rem] right-[9rem]"
         />
+      </div>
+    </section>
+    <!-- section2 -->
+    <section>
+      <div class="w-full h-auto">
+        <img src="./src/img/star2.svg" alt="star2" />
+      </div>
+    </section>
+    <!-- section3 -->
+    <section>
+      <div>
+        <img src="./src/img/star3.svg" alt="star3" />
+      </div>
+      <div>
+        <p>Giới thiệu sơ qua về các chức năng phụ</p>
+        <p>
+          Unlock an Array of Writing Benefits and Enhancements Through the Power
+          of AI Writer.
+        </p>
+        <button>
+          <img src="./src/img/icon3.svg" alt="icon3" />
+          <a href="#">
+            <p>Learn More</p>
+          </a>
+        </button>
       </div>
     </section>
   </body>
